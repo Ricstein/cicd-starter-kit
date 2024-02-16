@@ -25,7 +25,9 @@ jobs:
         with:
           node-version: '20.x'
       - name: run lint
-        run: npm run lint
+        run: |
+          npm install
+          npm run lint
 
       - name: Build And Deploy
         id: builddeploy
